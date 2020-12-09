@@ -1,7 +1,7 @@
 package com.wang.controller;
 
-import com.wang.entity.WfeProcInstTaskNodeHistory;
-import com.wang.mapper.WfeProcInstTaskNodeHistoryMapper;
+import com.wang.entity.Student;
+import com.wang.mapper.StudentMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MyController {
     @Autowired
-    private WfeProcInstTaskNodeHistoryMapper wfeProcInstTaskNodeHistoryMapper;
+    private StudentMapper studentMapper;
 
     @GetMapping("/test")
     public String test(){
@@ -23,18 +23,18 @@ public class MyController {
     }
 
     @GetMapping("/get/{id}")
-    public WfeProcInstTaskNodeHistory get(@PathVariable Long id){
-        return wfeProcInstTaskNodeHistoryMapper.selectByPrimaryKey(id);
+    public Student get(@PathVariable Integer id){
+        return studentMapper.selectByPrimaryKey(id);
     }
 
     @GetMapping("/getProc/{id}")
-    public WfeProcInstTaskNodeHistory getProc(@PathVariable Long id){
-        return wfeProcInstTaskNodeHistoryMapper.callProcedure(id);
+    public Student getProc(@PathVariable Long id){
+        return studentMapper.callProcedure(id);
     }
 
 
     @GetMapping("/getFunction")
     public Long getFunction(){
-        return wfeProcInstTaskNodeHistoryMapper.callFunction();
+        return studentMapper.callFunction();
     }
 }

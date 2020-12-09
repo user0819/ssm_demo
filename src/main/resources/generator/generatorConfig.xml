@@ -35,8 +35,8 @@
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
 
-        <table tableName="wfe_proc_inst_task_node_history"
-               domainObjectName="WfeProcInstTaskNodeHistory"
+        <table tableName="student"
+               domainObjectName="Student"
                enableCountByExample="false"
                enableUpdateByExample="false"
                enableDeleteByExample="false"
