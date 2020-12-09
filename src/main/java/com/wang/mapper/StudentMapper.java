@@ -3,13 +3,13 @@ package com.wang.mapper;
 import com.wang.entity.Student;
 
 public interface StudentMapper {
-    int deleteByPrimaryKey(Integer id);
+    int deleteByPrimaryKey(Long id);
 
     int insert(Student record);
 
     int insertSelective(Student record);
 
-    Student selectByPrimaryKey(Integer id);
+    Student selectByPrimaryKey(Long id);
 
     int updateByPrimaryKeySelective(Student record);
 
